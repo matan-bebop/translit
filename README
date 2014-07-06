@@ -1,0 +1,34 @@
+A realization of Cyr2Url transliteration scheme -- fully reversible 
+translitaration of cyrillic, which can be suited for transliteration to URLs.
+
+FEATURES:
+- transliterates all characters from Ukrainian, Russian and Belorussian alphabets + space character
+- fully reversible (including the lettercase for cyr-lat-cyr)
+- fully URL-compatible (latin characters, dot, underscore, tilde)
+- based on the transliteration standard developed by the Terminological Comission of the Natural Sciences (TCNS) of the Kyiv National University
+- decently readable transliterated form 
+
+Encoding of non-Ukrainian characters:
+э = eh, ў = w                  # TCNS standard
+ы = yh, ё = joh, ъ = .h
+
+Examples:
+  Ukrajina    = Україна        # TCNS standard
+  cvtitenj    = цвітень        # TCNS
+  горщик      = ghorshhyk      # TCNS
+  p.jatj      = п'ять
+  z~jorzhenyj = зйоржений
+  ob.hjavytj  = объявить       # Russian alphabet
+  johzhyk     = ёжик           # Russian 
+  ehlektron   = электрон       # Russian & Belorussian 
+  pownyh       = поўны         # Belorussian
+
+Implemented translitaration scheme, Ukrainian URL (UURL) or Cyr2Url, was
+invented by Andriy V. Makukha. Author's document describing the scheme can be
+found on the Web,
+
+http://nbuv.gov.ua/sites/default/files/all_files/201310_artilces_field_dopmat_files/wikiconf_2011_ukraine_-_makukha_-_article.pdf
+
+as wel as the original realization,
+
+http://code.google.com/p/cyr2url/
