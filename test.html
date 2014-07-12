@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="translit.js"></script>
+</head>
+
+<body>
+  <textarea cols=60 rows=10 id="TEXTBOX_ID"> 
+	  Смеркалося. Із Лисянки
+	  Кругом засвітило:
+	  Ото Гонта з Залізняком
+	  Люльки закурили.
+  </textarea>
+
+  <button type="button" onclick="translit()">Трансліт</button>
+  <button type="button" onclick="detranslit()">Де-трансліт</button>
+
+  <script>
+	var tr = new Translit.Transliterator("'", '.', {});
+
+    function translit()
+    {
+       s =  tr.code(document.getElementById("TEXTBOX_ID").value);
+	   console.log(s);
+       document.getElementById("TEXTBOX_ID").value = s;
+    }
+
+    function detranslit()
+    {
+       document.getElementById("TEXTBOX_ID").value =
+         tr.decode(document.getElementById("TEXTBOX_ID").value);
+	}
+  </script>
+
+</body>
+
+</html>
