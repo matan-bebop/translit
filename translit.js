@@ -219,5 +219,15 @@ Translit.Transliterator.prototype.decode = function(str) {
 	return this.code(str, this.reciprocal_tr);
 }
 
-Translit.Url = new Translit.Transliterator("'", '.', {' ':'-'});
-Translit.Filename = new Translit.Transliterator("~", '.', {' ':'_'});
+Translit.Url = new Translit.Transliterator(
+	/* apo = */"'", /* stop = */'.', {
+	' ':'-',
+	'«':',,',
+    '»':"''"
+});
+Translit.Filename = new Translit.Transliterator(
+	/* apo = */".",	/* stop = */ '~', {
+	' ':'_',
+	'«':'~-',
+	'»':'-~'
+});
