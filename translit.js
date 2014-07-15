@@ -104,6 +104,8 @@ function twofold(res0, obj1, obj2, fun) {
 	return res;	
 }
 
+var url = null;
+
 return {
 	Transliterator : function(apostrophe, stop, custom_table) {
 
@@ -216,3 +218,6 @@ Translit.Transliterator.prototype.code = function(str, table) {
 Translit.Transliterator.prototype.decode = function(str) {
 	return this.code(str, this.reciprocal_tr);
 }
+
+Translit.Url = new Translit.Transliterator("'", '.', {' ':'-'});
+Translit.Filename = new Translit.Transliterator("~", '.', {' ':'_'});
