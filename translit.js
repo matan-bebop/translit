@@ -231,3 +231,8 @@ Translit.Filename = new Translit.Transliterator(
 	'«':'~-',
 	'»':'-~'
 });
+
+if(typeof module !== "undefined") { // Check if we are being exported to Node
+	// Declare what do we export for Node.js
+ 	module.exports = Translit;
+}
