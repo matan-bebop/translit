@@ -1,5 +1,5 @@
-A realization of Cyr2Url transliteration scheme -- fully reversible 
-translitaration of cyrillic, which can be suited for transliteration to URLs.
+A realization of Cyr2Url transliteration scheme, which provides fully reversible 
+romanization of cyrillic text. It can be suited for the romanization for URLs or filenames.
 
 FEATURES:
 - transliterates all characters from Ukrainian, Russian and Belorussian alphabets + space character
